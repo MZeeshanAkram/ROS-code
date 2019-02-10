@@ -1,0 +1,35 @@
+#
+#                 validations_params.yaml
+#
+# YAML file storing all parameters. Rosparametres
+# should be created in the tree hierarchy. There is
+# 'timeSync' node in the end, and before are the names
+# of the topic. After colon(:) there is parameter 
+# value. We can add other types of validations along
+# with 'timeSync'.
+
+camera:
+    depth:
+        image_raw_front:
+          timeSync: 5
+          something_else: x
+      
+        image_raw_left:
+          timeSync: 5
+    
+    rgb:
+        image_raw_back:
+          timeSync: 20
+          something_else: x
+    
+        image_raw_front:
+          timeSync: 20
+
+iqbal:
+    imu/data:
+      timeSync: 42
+      something_else: x
+
+    navsat/fix:
+      timeSync: 21
+      something_else: x
